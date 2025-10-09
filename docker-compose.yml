@@ -1,0 +1,14 @@
+name: zola
+
+services:
+  zola:
+    container_name: zola
+    build: .
+    ports:
+      - "1313:80"
+    networks:
+      - cloudflared-net
+
+networks:
+  cloudflared-net:
+    external: true
