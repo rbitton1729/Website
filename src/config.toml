@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://100.100.200.0:1313"
+base_url = "https://rbitton.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -19,10 +19,11 @@ highlight_code = false
 [extra]
 # Put all your custom variables here
 main_menu = [
-  { name = "about", url = "about", trailing_slash = true},
-  { name = "resume", url = "resume", trailing_slash = true},
-  { name = "meditations", url = "meditations", trailing_slash = true},
+  { name = "about", url = "about", trailing_slash = true },
+  { name = "resume", url = "resume", trailing_slash = true },
+  { name = "meditations", url = "meditations", trailing_slash = true },
   { name = "git", url = "https://git.rbitton.com/rbitton", new_tab = true },
+  { name = "photos", url = "https://photos.rbitton.com/share/ujS7skFBGW0xG22K2SCE6JsIppM-8tAlb_wyl39J0KDs7rTYY38AQ8z44tLOktCQErA", new_tab = true },
   { name = "flights", url = "https://flights.rbitton.com/share/public", new_tab = true },
 ]
 
