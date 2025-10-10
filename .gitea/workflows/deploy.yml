@@ -5,13 +5,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
+    runs-on: docker
+    container:
+      image: docker:27.1-dind
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v4
-
-      - name: Build Zola site
-        run: |
-          docker compose build
-          docker compose up -d
+      - uses: actions/checkout@v4
+      - run: docker compose build zola
+      - run: docker compose up -d zola
