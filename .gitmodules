@@ -1,3 +1,6 @@
 [submodule "src/themes/terminus"]
 	path = src/themes/terminus
 	url = https://github.com/ebkalderon/terminus.git
+[submodule "src/content/resume"]
+	path = src/content/resume
+	url = https://git.rbitton.com/rbitton/Resume.git

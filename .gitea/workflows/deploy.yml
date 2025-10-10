@@ -1,0 +1,17 @@
+name: Build and Deploy Zola Site
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Build Zola site
+        run: |
+          docker compose build
+          docker compose up -d
