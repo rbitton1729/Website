@@ -31,15 +31,16 @@
 
 {%- if config.extra.copyright -%}
 <p class="copyright">
-    {%- for line in config.extra.copyright | split(pat="::") %}
-    {% set year_string = ["<time>", now() | date(format="%Y"), "</time>"] | join -%}
-    {%- set templated = line | trim | replace(from="$YEAR", to=year_string) | replace(from="$AUTHOR", to=config.author | default(value="")) -%}
-    <span>{{ templated | markdown(inline=true) | safe }}</span>
-    {%- endfor %}
-
-    {% if config.extra.source_code %}
-    <span><a href="{{ config.extra.source_code | safe }}" rel="noopener noreferrer">Site Source Code</a></span>
-    {% endif %}
+    {%- for line in config.extra.copyright | split(pat="::") -%}
+        {% set year_string = ["<time>", now() | date(format="%Y"), "</time>"] | join -%}
+        {%- set templated = line | trim | replace(from="$YEAR", to=year_string) | replace(from="$AUTHOR", to=config.author | default(value="")) -%}
+        <span>{{ templated | markdown(inline=true) | safe }}</span>
+    {%- endfor -%}
+    {%- if config.extra.source_code -%}
+        <span><a href="{{ config.extra.source_code | safe }}"
+                 rel="noopener noreferrer"
+                 target="_blank">Site Source Code</a></span>
+    {%- endif -%}
 </p>
 {% else -%}
 <p class="copyright">
