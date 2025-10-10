@@ -7,7 +7,6 @@ RUN echo "@community https://dl-cdn.alpinelinux.org/alpine/v3.20/community" \
 WORKDIR /site
 COPY src/ .
 
-
 RUN git clone https://git.rbitton.com/rbitton/Resume.git /tmp/resume && \
     mkdir -p static/files && \
     mkdir -p content/resume && \
