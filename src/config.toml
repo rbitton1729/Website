@@ -29,3 +29,5 @@ main_menu = [
 
 copyright = "© $YEAR $AUTHOR"
 favicon_emoji = "🐧"
+
+source_code = "https://git.rbitton.com/rbitton/Website"
