@@ -4,15 +4,16 @@ date = 2025-10-10
 +++
 
 # Raphael Bitton
-Chicago, IL | raphael@rbitton.com | +1 (562) 794-3373  
+Chicago, IL | raphael@rbitton.com
 
 ## Education
 **University of Chicago** — B.A. in Data Science & Music (2021–Present)
 - President’s Scholar
 
-## Research
+## Research Experience
+**Department of Computer Science, University of Chicago**
 
-## Experience 
+## Work Experience
 
 ## Skills
 
