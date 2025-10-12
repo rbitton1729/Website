@@ -16,5 +16,6 @@ Chicago, IL | raphael@rbitton.com
 ## Work Experience
 
 ## Skills
+Technical: GNU/Linux
 
 ## Awards and Interests
