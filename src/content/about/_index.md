@@ -11,4 +11,3 @@ My formal majors are Data Science and Music, but I'm kind of all over the place.
 
 I like systems that make sense, music that doesn’t, and the way both Adele and Bach can bring order to chaos. Whether I’m balancing RAID arrays, planning the next server migration, or diving into aviation data for no practical reason, I’m driven by the same thing: curiosity, and the satisfaction of making something truly work.
 
-SoCal made me; Chicago trained me; the command line keeps me honest.
