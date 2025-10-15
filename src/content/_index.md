@@ -16,6 +16,7 @@ I'm a world traveler — see my flight log and select photos in the menu above.
 I'm an amateur composer; I’m working on a way to host my music and scores here.
 
 <figure>
-  <img src="/images/HEADSHOT-FINAL.png" alt="Cockpit view">
+  <img src="/images/HEADSHOT-FINAL.png" alt="Raphael's Headshot">
+  <figcaption>A heavily photoshopped headshot of me (I'm not very good at photoshop)</figcaption>
 </figure>
 
