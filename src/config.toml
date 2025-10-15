@@ -28,6 +28,12 @@ main_menu = [
   { name = "contact", url = "contact", trailing_slash = true },
 ]
 
+socials = [
+    { name = "email", url = "mailto:raphael@rbitton.com" },
+    { name = "github", url = "https://github.com/rbitton1729", new_tab = true},
+    { name = "linkedin", url = "https://www.linkedin.com/in/rbitton1729", new_tab = true},
+]
+
 copyright = "© $YEAR $AUTHOR"
 favicon_emoji = "🐧"
 
