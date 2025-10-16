@@ -5,7 +5,7 @@ title = "Home"
 framed = true
 +++
 
-# I am Raphael
+# I'm Raphael Bitton.
 
 I'm an undergraduate at the University of Chicago studying Data Science and Music.
 
@@ -17,6 +17,6 @@ I'm an amateur composer; I’m working on a way to host my music and scores here
 
 <figure>
   <img src="/images/HEADSHOT-FINAL.png" alt="Raphael's Headshot">
-  <figcaption>A heavily photoshopped headshot of me (I'm not very good at photoshop)</figcaption>
+  <figcaption>A photoshopped headshot of me (I'm not very good at photoshop)</figcaption>
 </figure>
 

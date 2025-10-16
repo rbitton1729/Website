@@ -1,5 +1,8 @@
 +++
 title = "Meditations"
+sort_by    = "date"
+sort_order = "desc"
 +++
+# Meditations
 
-One day I'd like to write some blogs (I call them "meditations" because it sounds cooler) and when that happens they will live here.
+This is the home of my "blog" which is mostly random thoughts on things. I plan to have some Linux content as well as stuff relating to my many other interests.

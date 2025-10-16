@@ -4,6 +4,8 @@ base_url = "https://rbitton.com"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
+
+generate_sitemap = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
@@ -33,11 +35,12 @@ socials = [
     { name = "gitea", url = "https://git.rbitton.com/rbitton", new_tab = true },
     { name = "github", url = "https://github.com/rbitton1729", new_tab = true},
     { name = "gitlab", url = "https://gitlab.com/rbitton", new_tab = true },
+#    { name = "instagram", url = "https://www.instagram.com/rbitton1729", new_tab = true },
 #    { name = "reddit", url = "https://www.reddit.com/user/rbitton/", new_tab = true}, 
     { name = "linkedin", url = "https://www.linkedin.com/in/rbitton1729", new_tab = true},
 ]
 
 copyright = "© $YEAR $AUTHOR"
-favicon = "favicon.svg"
+favicon = "favicon.png"
 
 source_code = "https://git.rbitton.com/rbitton/Website"

@@ -3,7 +3,9 @@ title = "About"
 date = 2025-10-09
 +++
 
-# About Me
+# Who is Raphael?
+
+A fair question. I’m still figuring that out myself, but here's what I know thus far.
 
 I’m a 4th year student at the University of Chicago with an enduring fascination for systems — the kind that hum quietly when they work and demand humility when they don’t. Most of my time goes into running and refining a constellation of Linux machines, tinkering with infrastructure, and turning half-baked technical curiosities into functioning projects.
 
