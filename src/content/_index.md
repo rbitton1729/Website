@@ -5,18 +5,19 @@ title = "Home"
 framed = true
 +++
 
-# I'm Raphael Bitton.
+<center>
+  <h1 style="font-size:3em !important; line-height:1.1;">Raphael Bitton</h1>
+</center>
 
-I'm an undergraduate at the University of Chicago studying Data Science and Music.
+### Student, System Orchestrator (and Occasional Composer), Explorer  
 
-I'm a Linux enthusiast (some call me an absolutist). Everything I own runs Linux, and nothing excites me more than an hours-long terminal session.
+Welcome to my home. Please take off your shoes before entering—or don’t; I’m not checking.  
 
-I'm a world traveler — see my flight log and select photos in the menu above.
+You can use the menu above to find where you’d like to go—or just stare at my headshot for a while. Either is fine.  
 
-I'm an amateur composer; I’m working on a way to host my music and scores here.
 
-<figure>
+<figure class="headshot">
   <img src="/images/HEADSHOT-FINAL.png" alt="Raphael's Headshot">
-  <figcaption>A photoshopped headshot of me (I'm not very good at photoshop, but this picture makes me feel pretty)</figcaption>
+  <figcaption>A photoshopped headshot of me (I'm not very good at Photoshop, but this picture makes me feel pretty)</figcaption>
 </figure>
 
