@@ -17,6 +17,6 @@ I'm an amateur composer; I’m working on a way to host my music and scores here
 
 <figure>
   <img src="/images/HEADSHOT-FINAL.png" alt="Raphael's Headshot">
-  <figcaption>A photoshopped headshot of me (I'm not very good at photoshop)</figcaption>
+  <figcaption>A photoshopped headshot of me (I'm not very good at photoshop, but this picture makes me feel pretty)</figcaption>
 </figure>
 
