@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{%- block title -%}
+{{ section.title }} | {{ config.title }}
+{%- endblock -%}
+
+{%- block description -%}
+    {%- if section.description %}
+    <meta name="description" content="{{ section.description | markdown(inline=true) | striptags | safe }}">
+    {%- elif config.description %}
+    <meta name="description" content="{{ config.description | safe }}">
+    {%- endif %}
+{%- endblock -%}
+
+{%- block main -%}
+{%- filter indent -%}{%- filter indent -%}
+{%- if section.content -%}
+<header class="content {%- if section.extra.framed %} framed{%- endif -%}">
+    {{ section.content | indent | safe }}
+</header>
+{% endif -%}
+
+{% for path in section.subsections -%}
+{%- set subsection = get_section(path=path) -%}
+<article class="post">
+    <header>
+        <h2 class="post-title">
+            <a href="{{ subsection.permalink | safe }}">{{ subsection.title }}</a>
+        </h2>
+        <ul class="post-meta">
+            {%- if subsection.extra.date %}
+            <li title="Published on {{ subsection.extra.date }}">
+                <time datetime="{{ subsection.extra.date }}">{{ subsection.extra.date | date(format="%Y.%m.%d") }}</time>
+            </li>
+            {%- endif %}
+            
+            {%- if config.author and config.extra.show_default_author %}
+            <li role="separator" aria-hidden="true">::</li>
+            <li title="Author">{{ config.author }}</li>
+            {%- endif %}
+            
+            {%- if subsection.word_count %}
+            <li role="separator" aria-hidden="true">::</li>
+            {%- set reading_time = subsection.reading_time ~ " min" | replace(from="0 min", to="<1 min") -%}
+            {%- set word_count = [subsection.word_count ~ " word", subsection.word_count | pluralize] | join %}
+            <li title="{{ word_count }}"><time datetime="PT{{ subsection.reading_time }}M">{{ reading_time }}</time> read</li>
+            {%- endif %}
+        </ul>
+    </header>
+    {%- if subsection.description %}
+    <p>{{ subsection.description | markdown(inline=true) | safe }}</p>
+    {%- endif %}
+    <a class="read-more" href="{{ subsection.permalink | safe }}" aria-label="Read more about {{ subsection.title }}">read more →</a>
+</article>
+{% endfor -%}
+
+{% for page in paginator.pages | default(value=section.pages) -%}
+{{ post_macros::excerpt(page=page) }}
+{% endfor -%}
+
+{%- if paginator and paginator.number_pagers > 1 %}
+<nav class="pagination">
+    <ul>
+        {%- if paginator.previous %}
+        <li><a rel="prev" href="{{ paginator.previous | safe }}" aria-label="newer posts">&lt;&nbsp;[newer posts]</a></li>
+        {%- endif %}
+        {%- if paginator.next %}
+        <li><a rel="next" href="{{ paginator.next | safe }}" aria-label="older posts">[older posts]&nbsp;&gt;</a></li>
+        {%- endif %}
+    </ul>
+</nav>
+{%- endif %}
+{% endfilter %}{% endfilter %}
+{%- endblock -%}

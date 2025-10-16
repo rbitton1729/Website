@@ -1,6 +1,5 @@
 +++
 title = "About"
-date = 2025-10-09
 +++
 
 # Who is Raphael?
