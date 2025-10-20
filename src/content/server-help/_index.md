@@ -8,7 +8,7 @@ sort_order = "desc"
 
 This page contains instructions on how to access my servers in **Chicago, IL** and **Irvine, CA**, available to **University of Chicago** and **UC Irvine** students and faculty.
 
-Keep in mind this is a demo server. Please be resource aware as there are only 4 threads and 16 GB of RAM. Use tools like `nice` and `systemd-run` whenever possible. In the future I plan to expand, assuming all goes well.
+**Keep in mind this is a demo server.** Please be resource aware as there are only 4 threads and 16 GB of RAM. Use tools like `nice` and `systemd-run` whenever possible. I offer alternatives to common workflows using my other servers in the FAQ. In the future I plan to expand, assuming all goes well.
 
 ---
 
@@ -42,7 +42,7 @@ I’ll reply with your login details or ask for more information if needed.
    - This authentication should last for one week, though Cloudflare may require you to reauthentic sooner based on various factors.
 3. Once authenticated, you’ll be prompted for your **username** (your CNet ID or UCInetID).
 4. Use the **temporary password** sent to you in your confirmation email.
-5. Your account is restricted to 15 GiB in your home folder. If you need more, contact me.
+5. Your account is restricted to 15 GiB in your home folder. If you reach this limit you will hit an I/O failure. If you need more, contact me.
 
 When you first log in, you’ll immediately be prompted to change your password.  
 Your new password must meet the following requirements:  
@@ -80,7 +80,7 @@ systemctl --user enable --now docker
 export DOCKER_HOST=unix:///run/user/$UID/docker.sock
 ```
 
-Then use docker as normal (no sudo).
+Each login session. Then use docker as normal (no sudo).
 
 If you'll be using Docker often, add this to you shell's rc file:
 
@@ -96,7 +96,7 @@ echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.zshrc
 
 ### I want to compile something
 
-This system is not ideal for large compilations. As your friendly sysadmin, please email a git repo and I will compile them for you on my workstation (i9-13900KF (32 threads) with 64 GB of RAM.
+This system is not ideal for large compilations. As your friendly sysadmin, please email a git repo and I will compile them for you on my workstation (i9-13900KF (32 threads) with 64 GB of RAM).
 
 ---
 
@@ -106,9 +106,11 @@ This will not work on this system. I have another server that can handle this (R
 
 ---
 
-### I want to expose something to the public internet.
+### I want to expose something to the public internet or test my web apps
 
 Due to security concerns, publicly open ports are never allowed on any of my systems (the UChicago sysadmins only realized the danger over summer 2025). You can use Cloudflare Tunnels (cloudflared) to expose services to the public internet. I use these for all my services and they are free with a Cloudflare account. You can find more about them [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). While the cloudflared system binary is installed, I highly recommend using Docker.
+
+You can also use this without an account for dev testing. Simply run `cloudflared tunnel --url http://localhost:{your-port}` and copy the generated URL into your browser. Or do the same using Docker.
 
 ---
 
