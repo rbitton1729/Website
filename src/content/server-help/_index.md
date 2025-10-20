@@ -40,6 +40,7 @@ I’ll reply with your login details or ask for more information if needed.
    - You’ll receive a one-time authentication code by email.  
 3. Once authenticated, you’ll be prompted for your **username** (your CNet ID or UCInetID).
 4. Use the **temporary password** sent to you in your confirmation email.
+5. Your account is restricted to 15 GiB in your home folder. If you need more, contact me.
 
 When you first log in, you’ll immediately be prompted to change your password.  
 Your new password must meet the following requirements:  
