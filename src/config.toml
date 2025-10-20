@@ -22,7 +22,7 @@ highlight_code = false
 # Put all your custom variables here
 main_menu = [
   { name = "about", url = "about", trailing_slash = true },
-  { name = "resume", url = "resume", trailing_slash = true },
+#  { name = "resume", url = "resume", trailing_slash = true },
   { name = "meditations", url = "meditations", trailing_slash = true },
   { name = "git", url = "https://git.rbitton.com/rbitton", new_tab = true },
   { name = "flights", url = "https://flights.rbitton.com/share/public", new_tab = true },
