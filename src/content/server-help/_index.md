@@ -46,7 +46,7 @@ I’ll reply with your login details or ask for more information if needed.
 
 When you first log in, you’ll immediately be prompted to change your password.  
 Your new password must meet the following requirements:  
-**Minimum 10 characters, including at least two of: uppercase, lowercase, number, or special character.**
+**Minimum 8 characters, including at least three of: uppercase, lowercase, number, or special character.**
 
 ---
 
@@ -80,7 +80,7 @@ systemctl --user enable --now docker
 export DOCKER_HOST=unix:///run/user/$UID/docker.sock
 ```
 
-Each login session. Then use docker as normal (no sudo).
+for each login session. Then use docker as normal (no sudo).
 
 If you'll be using Docker often, add this to you shell's rc file:
 
@@ -110,11 +110,11 @@ This will not work on this system. I have another server that can handle this (R
 
 Due to security concerns, publicly open ports are never allowed on any of my systems (the UChicago sysadmins only realized the danger over summer 2025). You can use Cloudflare Tunnels (cloudflared) to expose services to the public internet. I use these for all my services and they are free with a Cloudflare account. You can find more about them [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). While the cloudflared system binary is installed, I highly recommend using Docker.
 
-You can also use this without an account for dev testing. Simply run `cloudflared tunnel --url http://localhost:{your-port}` and copy the generated URL into your browser. Or do the same using Docker.
+You can also use this without an account for dev testing. Simply run `cloudflared tunnel --url http://localhost:{your-port}` and copy the generated URL into your browser. Or do the same using Docker. **Do not use this for production or leave it constantly running or Cloudflare will get mad**. See the docs above for using it in a production environment.
 
 ---
 
-### I want to use something else
+### There is a program or binary I would like to use that is not currently provided
 
 Please let me know at the email at the bottom of this page. I will look into it and let you know. Most likely if it seems to benifit multiple users I will install it.
 
