@@ -52,7 +52,7 @@ Your new password must meet the following requirements:
 
 ### I want to use Python
 
-The servers run **Arch Linux (btw)**, which means Python is always up to date — often *too* up to date.  
+The servers run **Arch Linux (btw)**, which means the system Python is always up to date — often *too* up to date.  
 We use **pyenv** to manage local Python versions.
 
 Follow the setup instructions (skip installation section A) at:  
@@ -106,7 +106,7 @@ Yes. All home folders are snapshoted every hour on the hour and are recoverable 
 ---
 
 ### Are my files safe?
-Yes. All disks are LUKS encrypted and are not exposed to the public internet (hence the Cloudflared web-terminal).
+Yes. All disks are LUKS encrypted and are not exposed to the public internet (hence the Cloudflared web-terminal). Btrfs (the filesystem I use) uses checksums to verify the integrity of all files and prevent bitrot, and attempt to restore files if issues are found.
 
 ---
 ### I have another question.
