@@ -8,7 +8,7 @@ sort_order = "desc"
 
 This page contains instructions on how to access my servers in **Chicago, IL** and **Irvine, CA**, available to **University of Chicago** and **UC Irvine** students and faculty.
 
-Keep in mind this is a demo server. Please be resource aware as there are only 4 threads and 16 GB of RAM. In the future I plan to expand assuming all goes well.
+Keep in mind this is a demo server. Please be resource aware as there are only 4 threads and 16 GB of RAM. Use tools like `nice` and `systemd-run` whenever possible. In the future I plan to expand, assuming all goes well.
 
 ---
 
@@ -38,8 +38,8 @@ I’ll reply with your login details or ask for more information if needed.
 
 1. Visit **[ssh.rbitton.com](https://ssh.rbitton.com)**.  
 2. Log in using your email address through the Cloudflare Access portal. 
-   - Your request will be routed to the appropriate server based on your email domain (i.e. @uchicago.edu vs @uci.edu).
    - You’ll receive a one-time authentication code by email.  
+   - This authentication should last for one week, though Cloudflare may require you to reauthentic sooner based on various factors.
 3. Once authenticated, you’ll be prompted for your **username** (your CNet ID or UCInetID).
 4. Use the **temporary password** sent to you in your confirmation email.
 5. Your account is restricted to 15 GiB in your home folder. If you need more, contact me.
