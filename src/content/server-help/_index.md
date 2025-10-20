@@ -8,6 +8,8 @@ sort_order = "desc"
 
 This page contains instructions on how to access my servers in **Chicago, IL** and **Irvine, CA**, available to **University of Chicago** and **UC Irvine** students and faculty.
 
+Keep in mind this is a demo server. Please be resource aware as there are only 4 threads and 16 GB of RAM. In the future I plan to expand assuming all goes well.
+
 ---
 
 ## Cloudflare Web Terminal
@@ -89,6 +91,19 @@ echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.bashrc
 # For Zsh:
 echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.zshrc
 ```
+
+---
+
+### I want to compile something
+
+This system is not ideal for large compilations. As your friendly sysadmin, please email a git repo and I will compile them for you on my workstation (i9-13900KF (32 threads) with 64 GB of RAM.
+
+---
+
+### I want to run an LLM or embedding model.
+
+This will not work on this system. I have another server that can handle this (RTX 2070 with 8 GB of dedicated VRAM) and would be more than happy to tie it into whatever you are working on.
+
 ---
 
 ### I want to expose something to the public internet.
