@@ -91,6 +91,12 @@ echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.zshrc
 ```
 ---
 
+### I want to expose something to the public internet.
+
+Due to security concerns, publicly open ports are never allowed on any of my systems (the UChicago sysadmins only realized the danger over summer 2025). You can use Cloudflare Tunnels (cloudflared) to expose services to the public internet. I use these for all my services and they are free with a Cloudflare account. You can find more about them [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). While the cloudflared system binary is installed, I highly recommend using Docker.
+
+---
+
 ### I want to use something else
 
 Please let me know at the email at the bottom of this page. I will look into it and let you know. Most likely if it seems to benifit multiple users I will install it.
@@ -99,7 +105,7 @@ Please let me know at the email at the bottom of this page. I will look into it 
 
 ### I deleted something important, is there anything I can do?
 
-Yes. All home folders are snapshoted every hour on the hour and are recoverable for a certain period of time. Contact me at **[sysadmin@rbitton.com](mailto:sysadmin@rbitton.com)** using your **institutional email address** and I can help you recover your file. 
+Yes. All home folders are snapshoted every hour on the hour and are recoverable for a certain period of time. Contact me at **[sysadmin@rbitton.com](mailto:sysadmin@rbitton.com)** using your **institutional email address** and I can help you recover your file(s). 
 
 **Please note that this should not replace version control (i.e. git), as snapshots are only kept for a certain time after creation and at certain intervals thereafter.**
 
