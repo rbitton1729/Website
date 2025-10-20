@@ -104,6 +104,8 @@ This system is not ideal for large compilations. As your friendly sysadmin, plea
 
 This will not work on this system. I have another server that can handle this (RTX 2070 with 8 GB of dedicated VRAM) and would be more than happy to tie it into whatever you are working on.
 
+I also provide claude-code and gemini-cli binaries. Just run `claude` or `gemini` respectively and login.
+
 ---
 
 ### I want to expose something to the public internet or test my web apps
