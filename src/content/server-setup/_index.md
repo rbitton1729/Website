@@ -1,14 +1,14 @@
 +++
-title = "Server Help"
+title = "Server Setup"
 sort_by    = "date"
 sort_order = "desc"
 +++
 
-# Server Help
+# Server Setup
 
 This page contains instructions on how to access my servers in **Chicago, IL** and **Irvine, CA**, available to **University of Chicago** and **UC Irvine** students and faculty.
 
-**Keep in mind this is a demo server.** Please be resource aware as there are only 4 threads and 16 GB of RAM. Use tools like `nice` and `systemd-run` whenever possible. I offer alternatives to common workflows using my other servers in the FAQ. In the future I plan to expand, assuming all goes well.
+**Keep in mind these are demo servers.** Please be resource aware as they only have 4 threads and 16 GB of RAM each. Use tools like `nice`, `systemd-run`, and `export MAKEFLAGS="-j1"` whenever possible. I offer alternatives to common workflows using my other servers in the FAQ. In the future I plan to expand, assuming all goes well.
 
 ---
 
@@ -17,13 +17,13 @@ This page contains instructions on how to access my servers in **Chicago, IL** a
 The current access method uses Cloudflare’s secure, browser-based SSH terminal.  
 You do not need a VPN, SSH client, or key management.
 
-I am considering more options, though they will all require a VPN to securly access the server.
+I am considering more options, though they will all require a VPN to securely access the server.
 
 ---
 
 ## Step 1: Contact Me
 
-If you’d like access, email **[sysadmin@rbitton.com](mailto:sysadmin@rbitton.com)** using your **institutional email address**.
+If you’d like access, email **[auth@rbitton.com](mailto:auth@rbitton.com)** using your **institutional email address**.
 
 Include the following in your message:
 
@@ -37,16 +37,18 @@ I’ll reply with your login details or ask for more information if needed.
 ## Step 2: Access the Web Terminal
 
 1. Visit **[ssh.rbitton.com](https://ssh.rbitton.com)**.  
-2. Log in using your email address through the Cloudflare Access portal. 
-   - You’ll receive a one-time authentication code by email.  
-   - This authentication should last for one week, though Cloudflare may require you to reauthentic sooner based on various factors.
+2. Log in using your UChicago or UCI email address through the Cloudflare Access portal.
+   - You'll receive a one-time authentication code by email.
+   - This authentication should last for one week, though Cloudflare may require you to reauthenticate sooner based on various factors.
 3. Once authenticated, you’ll be prompted for your **username** (your CNet ID or UCInetID).
 4. Use the **temporary password** sent to you in your confirmation email.
-5. Your account is restricted to 15 GiB in your home folder. If you reach this limit you will hit an I/O failure. If you need more, contact me.
 
 When you first log in, you’ll immediately be prompted to change your password.  
 Your new password must meet the following requirements:  
 **Minimum 8 characters, including at least three of: uppercase, lowercase, number, or special character.**
+
+Your account is restricted to **15 GiB in your home folder**. If you reach this limit you will hit an I/O failure. You can see how much storage you have used by running `quota`. If you need more, contact me.
+
 
 ---
 
@@ -73,24 +75,18 @@ Refer to the pyenv guide above, and also see the **pyenv-virtualenv** plugin for
 ### I want to use Docker
 
 Each user account runs **rootless Docker**.  
-To enable and start it, run:
+To enable and start it, run `systemctl --user enable --now docker && export DOCKER_HOST=unix:///run/user/$UID/docker.sock` for each login session. 
 
-```shell
-systemctl --user enable --now docker
-export DOCKER_HOST=unix:///run/user/$UID/docker.sock
-```
+Then use docker as normal (no sudo).
 
-for each login session. Then use docker as normal (no sudo).
+If you'll be using Docker often, run these to append the export command to you shell's rc file:
 
-If you'll be using Docker often, add this to you shell's rc file:
+Bash: `echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.bashrc`
 
-```shell
-# For Bash:
-echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.bashrc
 
-# For Zsh:
-echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.zshrc
-```
+Zsh: `echo 'export DOCKER_HOST=unix:///run/user/$UID/docker.sock' >> ~/.zshrc`
+
+Then run `source ~/.bashrc` or `source ~/.zshrc` respectivly.
 
 ---
 
@@ -104,13 +100,13 @@ This system is not ideal for large compilations. As your friendly sysadmin, plea
 
 This will not work on this system. I have another server that can handle this (RTX 2070 with 8 GB of dedicated VRAM) and would be more than happy to tie it into whatever you are working on.
 
-I also provide claude-code and gemini-cli binaries. Just run `claude` or `gemini` respectively and login.
+I also provide claude-code, gemini-cli, and github-copilot binaries. Just run `claude`, `gemini`, or `copilot` respectively and login.
 
 ---
 
 ### I want to expose something to the public internet or test my web apps
 
-Due to security concerns, publicly open ports are never allowed on any of my systems (the UChicago sysadmins only realized the danger over summer 2025). You can use Cloudflare Tunnels (cloudflared) to expose services to the public internet. I use these for all my services and they are free with a Cloudflare account. You can find more about them [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). While the cloudflared system binary is installed, I highly recommend using Docker.
+Due to security concerns, publicly open ports are never allowed on any of my systems (the UChicago sysadmins only realized the danger during summer 2025). You can use Cloudflare Tunnels (cloudflared) to expose services to the public internet. I use these for all my services and they are free with a Cloudflare account. You can find more about them [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). While the cloudflared system binary is installed, I highly recommend using Docker.
 
 You can also use this without an account for dev testing. Simply run `cloudflared tunnel --url http://localhost:{your-port}` and copy the generated URL into your browser. Or do the same using Docker. **Do not use this for production or leave it constantly running or Cloudflare will get mad**. See the docs above for using it in a production environment.
 
@@ -118,13 +114,13 @@ You can also use this without an account for dev testing. Simply run `cloudflare
 
 ### There is a program or binary I would like to use that is not currently provided
 
-Please let me know at the email at the bottom of this page. I will look into it and let you know. Most likely if it seems to benifit multiple users I will install it.
+Please let me know at the email at the bottom of this page. I will look into it and let you know. Most likely if it seems to benefit multiple users I will install it.
 
 ---
 
 ### I deleted something important, is there anything I can do?
 
-Yes. All home folders are snapshoted every hour on the hour and are recoverable for a certain period of time. Contact me at **[sysadmin@rbitton.com](mailto:sysadmin@rbitton.com)** using your **institutional email address** and I can help you recover your file(s). 
+Yes. All home folders are snapshoted every hour on the hour and are recoverable for a certain period of time. Contact me at **[systems@rbitton.com](mailto:systems@rbitton.com)** using your **institutional email address** and I can help you recover your file(s). 
 
 **Please note that this should not replace version control (i.e. git), as snapshots are only kept for a certain time after creation and at certain intervals thereafter.**
 
@@ -136,4 +132,4 @@ Yes. All disks are LUKS encrypted and are not exposed to the public internet (he
 ---
 ### I have another question.
 
-Contact me at **[sysadmin@rbitton.com](mailto:sysadmin@rbitton.com)** using your **institutional email address** with your username and question and I'll be happy to respond.
+Contact me at **[systems@rbitton.com](mailto:systems@rbitton.com)** using your **institutional email address** with your username and question and I'll be happy to respond.
