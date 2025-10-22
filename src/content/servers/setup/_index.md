@@ -22,16 +22,11 @@ I am considering more options, though they will all require a VPN to securely ac
 
 ---
 
-## Step 1: Contact Me
+## Step 1: Request Access
 
-If you’d like access, email **[auth@rbitton.com](mailto:auth@rbitton.com)** using your **institutional email address**.
+Request access by filling out the [Google form](https://forms.gle/Xej1B7K1BVeQY29w6). You must be logged in with your institutional email.
 
-Include the following in your message:
-
-- Your **CNet ID** (UChicago) or **UCInetID** (UCI)
-- A short explanation of what you’d like to use the server for
-
-I’ll reply with your login details or ask for more information if needed.
+I’ll reply to your request with your login details or ask for more information if needed.
 
 ---
 
