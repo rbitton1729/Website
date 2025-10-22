@@ -27,6 +27,7 @@ main_menu = [
   { name = "git", url = "https://git.rbitton.com/rbitton", new_tab = true },
   { name = "flights", url = "https://flights.rbitton.com/share/public", new_tab = true },
   { name = "photos", url = "https://photos.rbitton.com/share/ujS7skFBGW0xG22K2SCE6JsIppM-8tAlb_wyl39J0KDs7rTYY38AQ8z44tLOktCQErA", new_tab = true },
+  { name = "status", url = "https://status.rbitton.com/status/public", new_tab = true },
   { name = "contact", url = "contact", trailing_slash = true },
 ]
 
