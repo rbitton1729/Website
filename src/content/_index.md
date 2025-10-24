@@ -11,6 +11,8 @@ framed = true
 
 ### Student, System Orchestrator (and Occasional Composer), Explorer
 
+### Founder & Lead Systems Engineer @ [Skylantix](https://skylantix.com/)
+
 Welcome to my home on the internet. This domain mainly hosts my various services, but I figured it deserved a front door you could actually walk through.
 
 I'm a University of Chicago President's Scholar with an obsession for **Linux** and systems orchestration. I've ditched all my Apple and Windows devices to go all-in on self-hosting—spending late nights (often at 4 a.m.) building Docker Compose stacks and maintaining a constellation of services across servers nationwide. 

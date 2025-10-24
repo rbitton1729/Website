@@ -24,6 +24,8 @@ I am considering more options, though they will all require a VPN to securely ac
 
 ## Step 1: Request Access
 
+Please review the [Privacy Policy](https://rbitton.com/servers/privacy) and the [Use Policy](https://rbitton.com/servers/use).
+
 Request access by filling out the [Google form](https://forms.gle/Xej1B7K1BVeQY29w6). You must be logged in with your institutional email.
 
 I’ll reply to your request with your login details or ask for more information if needed.
@@ -56,19 +58,21 @@ You are also restricted to 2 GiB of RAM.
 
 ### I want to use Python
 
-The servers run **Arch Linux (btw)**, which means the system Python is always up to date — often *too* up to date.  
-We use **pyenv** to manage local Python versions.
+The servers run **Arch Linux (btw)**, which means the system Python is always up to date — often *too* up to date.
+We use **uv** to manage local Python versions and dependencies.
 
-Follow the setup instructions (skip installation section A) at:  
-[github.com/pyenv/pyenv](https://github.com/pyenv/pyenv)
+Follow the setup instructions at:
+[docs.astral.sh/uv](https://docs.astral.sh/uv)
+
+No need to run the installation script-the binary is installed systemwide. Just run `uv`.
 
 ---
 
 ### Virtual Environments
 
-Using `python -m venv` isn’t necessary with pyenv.  
-Refer to the pyenv guide above, and also see the **pyenv-virtualenv** plugin for automatic environment switching:  
-[github.com/pyenv/pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
+Using `python -m venv` isn't necessary with uv.
+Refer to the uv guide above. uv automatically manages virtual environments for your projects.
+Learn more at: [docs.astral.sh/uv/pip/environments](https://docs.astral.sh/uv/pip/environments)
 
 ---
 
