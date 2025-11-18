@@ -5,7 +5,9 @@ date = 2025-10-10
 
 # Contact
 
-For professional or personal matters, please contact me at [raphael@rbitton.com](mailto:raphael@rbitton.com).
+For Skylantix, please contact me at [raphael@skylantix.com](mailto:raphael@skylantix.com).
+
+For non-Skylantix professional or personal matters, please contact me at [raphael@rbitton.com](mailto:raphael@rbitton.com).
 
 For academic matters, please contact me at [rbitton@uchicago.edu](mailto:rbitton@uchicago.edu).
 
